@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Доска статей</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="page-header">
+            <h1>Мир интересных статей</h1>
+            <p>
+                Читайте полезные материалы и делитесь своими идеями
+            </p>
+        </header>
+
+        <!-- Список статей -->
+        <section class="panel">
+
+            <div class="section-heading">
+                <h2>Последние статьи</h2>
+
+                <button id="loadPostsBtn" type="button">
+                    Загрузить статьи
+                </button>
+            </div>
+
+            <div id="postsList" class="posts-list">
+
+                <p class="empty-state">
+                    Пока статей нет. Нажмите кнопку загрузки.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Форма создания статьи -->
+        <section class="panel">
+
+            <h2>Опубликовать свою статью</h2>
+
+            <form id="postForm">
+
+                <div class="form-group">
+
+                    <label for="titleInput">
+                        Заголовок статьи
+                    </label>
+
+                    <input
+                        type="text"
+                        id="titleInput"
+                        placeholder="Введите название статьи"
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="bodyInput">
+                        Содержание статьи
+                    </label>
+
+                    <textarea
+                        id="bodyInput"
+                        rows="6"
+                        placeholder="Напишите свою статью..."
+                    ></textarea>
+
+                </div>
+
+                <button id="createPostBtn" type="submit">
+                    Опубликовать статью
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Сообщения -->
+        <div
+            id="message"
+            class="message"
+            role="status"
+            aria-live="polite"
+        ></div>
+
+        <footer class="footer">
+            <p>Доска статей © 2026</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
+
