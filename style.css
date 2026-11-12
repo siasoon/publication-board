@@ -1,0 +1,180 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f5f8;
+    color: #252525;
+    line-height: 1.6;
+}
+
+.header {
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    background-color: #315c9b;
+}
+
+.header h1 {
+    margin: 0 0 8px;
+}
+
+.header p {
+    margin: 0;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 30px auto;
+}
+
+.section {
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #315c9b;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #244675;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.posts-list {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.post-card {
+    padding: 18px;
+    border: 1px solid #e1e5eb;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.post-card h3 {
+    margin: 0 0 10px;
+    color: #315c9b;
+    overflow-wrap: anywhere;
+}
+
+.post-card p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.post-id {
+    display: block;
+    margin-top: 12px;
+    color: #777;
+    font-size: 13px;
+}
+
+.placeholder {
+    color: #777;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd2da;
+    border-radius: 6px;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #9bb9e5;
+    border-color: #315c9b;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.message:empty {
+    display: none;
+}
+
+.message.success {
+    color: #176b36;
+    background-color: #e5f5e9;
+}
+
+.message.error {
+    color: #a32323;
+    background-color: #fdeaea;
+}
+
+.message.info {
+    color: #24527c;
+    background-color: #e8f1fa;
+}
+
+.footer {
+    padding: 18px;
+    text-align: center;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 18px;
+    }
+
+    .section-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .section-heading button {
+        width: 100%;
+    }
+}

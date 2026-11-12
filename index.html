@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска публикаций</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Доска публикаций</h1>
+        <p>Читайте публикации и делитесь своими статьями</p>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <div class="section-heading">
+                <h2>Публикации</h2>
+                <button id="loadPostsButton" type="button">
+                    Загрузить статьи
+                </button>
+            </div>
+
+            <div id="postsList" class="posts-list">
+                <p class="placeholder">
+                    Нажмите «Загрузить статьи», чтобы получить публикации с сервера.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Опубликовать свою статью</h2>
+
+            <form id="postForm">
+                <div class="form-group">
+                    <label for="title">Заголовок</label>
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="Введите заголовок статьи"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="body">Текст</label>
+                    <textarea
+                        id="body"
+                        name="body"
+                        rows="5"
+                        placeholder="Введите текст статьи"
+                        required
+                    ></textarea>
+                </div>
+
+                <button id="submitButton" type="submit">
+                    Опубликовать
+                </button>
+            </form>
+
+            <div id="message" class="message" role="status" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Лабораторная работа № 3</p>
+    </footer>
+</body>
+</html>
